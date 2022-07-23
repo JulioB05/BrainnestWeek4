@@ -14,29 +14,29 @@ class Display {
         }
     }
 
-    borrar() {
+    delete() {
         this.currentValue = this.currentValue.toString().slice(0,-1);
         this.printValue();
     }
 
-    borrarTodo() {
+    deleteAll() {
         this.currentValue = '';
         this.previousValue = '';
         this.operationType = undefined;
         this.printValue();
     }
 
-    computar(tipo) {
-        this.operationType !== 'igual' && this.calcular();
-        this.operationType = tipo;
+    computar(type) {
+        this.operationType !== 'igual' && this.calculate();
+        this.operationType = type;
         this.previousValue = this.currentValue || this.previousValue;
         this.currentValue = '';
         this.printValue();
     }
 
-    agregarNumero(numero) {
-        if(numero === '.' && this.currentValue.includes('.')) return
-        this.currentValue = this.currentValue.toString() + numero.toString();
+    addNumber(number) {
+        if(number === '.' && this.currentValue.includes('.')) return
+        this.currentValue = this.currentValue.toString() + number.toString();
         this.printValue();
     }
 
@@ -45,7 +45,7 @@ class Display {
         this.displayPreviousValue.textContent = `${this.previousValue} ${this.signs[this.operationType] || ''}`;
     }
 
-    calcular() {
+    calculate() {
         const previousValue = parseFloat(this.previousValue);
         const currentValue = parseFloat(this.currentValue);
 

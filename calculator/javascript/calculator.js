@@ -6,7 +6,7 @@ const operatorButtons = document.querySelectorAll('.operator');
 const display = new Display(displayPreviousValue, displayCurrentValue);
 
 numberButtons.forEach(boton => {
-    boton.addEventListener('click', () => display.agregarNumero(boton.innerHTML));
+    boton.addEventListener('click', () => display.addNumber(boton.innerHTML));
 });
 
 operatorButtons.forEach(boton => {
