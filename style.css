@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(134.34% 134.34% at 50% 0%,
+            #1f3757 0%,
+            #131537 100%);
+
+    font-family: "Barlow", sans-serif;
+}
+
+
+h1 {
+    color: white;
+    font-size: 56px;
+    font-family: "Barlow", sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 800px;
+    height: 150px;
+    border-radius: 15px;
+    border: 1px solid white;
+    display: flex;
+    margin-top: 50px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.container a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #131537;
+    font-family: "Barlow", sans-serif;
+}
